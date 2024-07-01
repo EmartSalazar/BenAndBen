@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+html, body{
+    overflow: hidden;
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #95b3e0;
+    padding: 0.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .navbar {  
+    margin-right: -10%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+header .logo{
+    font-size: 2rem;
+    color: white;
+    margin-left: -5%;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+header .navbar a{
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    color: white;
+}
+
+header .navbar a:hover{
+    color: #6962b4;
+}
+
+header #tglbtn{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 2.5rem;
+    color:#333;
+    border-radius: .7rem;
+    padding: .5rem 1rem;
+    border: .1rem solid rgba(0,0,0, .3);
+    display: none;
+}
+
+@media(max-width:990px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+}
+
+@media(max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; 
+        left: -1%; 
+        right: 9%;
+        background: white;
+        border: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  
+        transition: clip-path 0.5s ease;
+    }
+
+    header #tglbtn:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1rem;
+        padding: 1.5rem;
+        background: #f0f0f0;
+        font-size: 14px;
+        color: #000000;
+        border: .1rem solid rgba(23, 12, 129, 0.1);
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+}
+
+@media(max-width:1000px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; 
+        left: -1%; 
+        right: 9%;
+        background: white;
+        border: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  
+        transition: clip-path 0.5s ease;
+    }
+
+    header #tglbtn:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1rem;
+        padding: 1.5rem;
+        background: #f0f0f0;
+        font-size: 14px;
+        color: #000000;
+        border: .1rem solid rgba(23, 12, 129, 0.1);
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+}
+
+
+@media(max-width:450px){
+
+    html{
+        font-size: 60%;
+    }
+
+    .heading{
+        font-size: 4rem;
+    }
+
+}
+
+ a{
+    text-decoration:none;
+    list-style:none;
+}
+
+@media (max-width:1000px){
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width: 600px){
+    section {
+        padding: 100px 50px;
+    }
+}
+
+.box{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+ 
+ .box video{
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: -1;
+ }
+ 
+ .box h1{
+     margin-bottom: 15px;
+     font-size: 65px;
+     text-transform: uppercase;
+     text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+ }
+ 
+ .box h3{
+     margin-bottom: 40px;
+     font-size: 25px;
+ }
+ 
+ .box a.boxBtn{
+     padding: 15px 35px;
+     background: transparent;
+     border-radius: 50px;
+     color:white;
+     text-transform: uppercase;
+     border: 4px solid #6962b4;
+     transition: all .5s;
+     text-decoration: none;
+ }
+ 
+ .box a.boxBtn:hover{
+     background:#95b3e0;
+     color: black;
+ }
+ 
+ @media (max-width: 800px){
+     .box h1{
+         font-size: 32px;
+     }
+     .box h3{
+         font-size: 20px;
+     }
+     .box a.boxBtn{
+         padding: 15px 40px;
+     }
+ }
